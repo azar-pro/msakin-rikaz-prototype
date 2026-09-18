@@ -1756,3 +1756,100 @@ section[id]{scroll-margin-top:105px}
   #projects .project-alarin{background-position:center 38%}
   #projects .project-park{background-position:center 46%}
 }
+
+
+/* ===== The Park decorative editorial overlay ===== */
+#projects .project-park{
+  position:relative;
+}
+#projects .park-editorial-overlay{
+  position:absolute;
+  top:26px;
+  right:26px;
+  left:26px;
+  z-index:2;
+  pointer-events:none;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  color:#fffdf7;
+}
+#projects .park-kicker{
+  display:inline-flex;
+  align-items:center;
+  min-height:25px;
+  padding:5px 10px;
+  margin-bottom:16px;
+  border-radius:999px;
+  background:#d8c4a3;
+  color:#0a2747;
+  font-size:9px;
+  font-weight:600;
+  line-height:1;
+  letter-spacing:.02em;
+}
+#projects .park-editorial-overlay strong{
+  max-width:90%;
+  font-size:clamp(28px,2.5vw,42px);
+  line-height:1.04;
+  font-weight:700;
+  letter-spacing:-.025em;
+  text-shadow:0 2px 14px rgba(4,21,38,.24);
+}
+#projects .park-editorial-overlay em{
+  margin-top:5px;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:clamp(27px,2.8vw,44px);
+  font-weight:400;
+  line-height:1;
+  font-style:italic;
+  letter-spacing:.01em;
+  color:rgba(255,253,247,.68);
+  text-shadow:0 2px 16px rgba(4,21,38,.18);
+}
+#projects .project-park:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  background:linear-gradient(
+    180deg,
+    rgba(4,21,38,.20) 0%,
+    rgba(4,21,38,.06) 38%,
+    rgba(4,21,38,0) 58%
+  );
+}
+#projects .project-park .project-overlay{
+  z-index:3;
+}
+@media(max-width:980px){
+  #projects .park-editorial-overlay{
+    top:22px;
+    right:22px;
+    left:22px;
+  }
+  #projects .park-editorial-overlay strong{
+    font-size:clamp(25px,3.2vw,34px);
+  }
+  #projects .park-editorial-overlay em{
+    font-size:clamp(24px,3.4vw,36px);
+  }
+}
+@media(max-width:760px){
+  #projects .park-editorial-overlay{
+    top:20px;
+    right:20px;
+    left:20px;
+  }
+  #projects .park-kicker{
+    margin-bottom:12px;
+  }
+  #projects .park-editorial-overlay strong{
+    font-size:30px;
+  }
+  #projects .park-editorial-overlay em{
+    font-size:31px;
+    color:rgba(255,253,247,.72);
+  }
+}
