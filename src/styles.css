@@ -288,3 +288,10 @@ footer{background:#f8f6f1}
   .about-grid{gap:26px}
   .footer-grid{padding:44px 0}
 }
+
+.section-footnote{
+  margin:18px 2px 0;
+  color:#7b8490;
+  font-size:12px;
+  line-height:1.8;
+}
