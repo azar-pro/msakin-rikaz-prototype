@@ -1598,3 +1598,38 @@ section[id]{scroll-margin-top:105px}
 @media(max-width:420px){
   .hero-copy h1{font-size:31px!important}
 }
+
+
+/* ===== Final polish: search count, hero title, The Park ===== */
+.hero-copy h1>span,
+.hero-copy h1>em{
+  display:block;
+}
+.search-head>b{
+  min-width:92px;
+  text-align:center;
+}
+.project-card{
+  background-repeat:no-repeat;
+}
+.project-park{
+  background-position:center 38%;
+}
+.project-park:before{
+  background:linear-gradient(180deg,rgba(4,21,38,.34) 0%,rgba(4,21,38,.62) 48%,rgba(4,21,38,.92) 100%)!important;
+}
+@media(max-width:760px){
+  .hero-copy h1>span,
+  .hero-copy h1>em{
+    display:block;
+  }
+  .project-park{
+    background-position:58% 38%;
+  }
+  .search-head>b{
+    min-width:0;
+    max-width:145px;
+    white-space:normal!important;
+    line-height:1.35;
+  }
+}
