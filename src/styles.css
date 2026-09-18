@@ -1499,3 +1499,102 @@ section[id]{scroll-margin-top:105px}
   background:#9aa5af!important;
   box-shadow:0 0 0 4px rgba(154,165,175,.10)!important;
 }
+
+
+/* ===== Final client-ready polish from review brief ===== */
+.hero-copy h1{
+  font-size:clamp(38px,4.35vw,60px);
+}
+.property-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  align-items:stretch;
+}
+.property-card{
+  height:100%;
+  display:flex;
+  flex-direction:column;
+}
+.property-card .card-media{
+  aspect-ratio:16/10;
+  height:auto;
+  flex:0 0 auto;
+}
+.property-card .card-body{
+  display:flex;
+  flex-direction:column;
+  flex:1;
+}
+.property-card .card-body h3{
+  min-height:2.65em;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+.property-card .facts{min-height:32px}
+.property-card .agent-line{margin-top:auto}
+.card-price{
+  color:var(--navy);
+  font-weight:900;
+  font-size:14px;
+  margin:4px 0 10px;
+}
+.tabs{grid-template-columns:repeat(3,1fr)}
+.project-card{
+  position:relative;
+  overflow:hidden;
+  min-height:430px;
+  background-size:cover;
+  background-position:center;
+}
+.project-card>img{display:none}
+.project-card:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(4,21,38,.04) 20%,rgba(4,21,38,.82) 100%);
+  pointer-events:none;
+}
+.project-overlay{
+  z-index:1;
+  max-width:560px;
+}
+.project-badge{
+  display:inline-flex;
+  width:max-content;
+  padding:6px 9px;
+  border-radius:999px;
+  background:rgba(255,255,255,.9);
+  color:var(--navy);
+  font-size:9px;
+  font-weight:900;
+  margin-bottom:10px;
+}
+.project-short-status{
+  display:block;
+  color:rgba(255,255,255,.75);
+  margin-bottom:7px;
+}
+.about-grid img{
+  object-fit:cover;
+  object-position:center;
+}
+.form-nav .btn.primary{
+  min-width:128px;
+}
+@media(max-width:980px){
+  .property-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:760px){
+  .hero-copy h1{font-size:34px!important}
+  .property-grid{grid-template-columns:1fr}
+  .property-card .card-media{aspect-ratio:16/10}
+  .property-card .card-body h3{min-height:auto}
+  .project-card{min-height:360px}
+  .agent-grid{grid-template-columns:1fr!important}
+  .routing-flow{display:flex!important;overflow-x:auto;white-space:nowrap;justify-content:flex-start}
+  .tabs{display:grid!important;grid-template-columns:repeat(3,1fr)!important}
+}
+@media(max-width:420px){
+  .hero-copy h1{font-size:31px!important}
+}
