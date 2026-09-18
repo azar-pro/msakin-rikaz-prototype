@@ -4,8 +4,6 @@
 
 
 /* ===== Visual polish — client presentation pass ===== */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap');
-
 :root{
   --navy:#0a2747;
   --navy2:#13385f;
@@ -1492,4 +1490,12 @@ section[id]{scroll-margin-top:105px}
     border:1px solid rgba(255,255,255,.7)!important;
     box-shadow:0 10px 24px rgba(0,0,0,.16);
   }
+}
+
+.muted-state{
+  color:#7a8792!important;
+}
+.muted-state:before{
+  background:#9aa5af!important;
+  box-shadow:0 0 0 4px rgba(154,165,175,.10)!important;
 }
