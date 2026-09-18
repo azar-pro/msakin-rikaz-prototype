@@ -1650,3 +1650,109 @@ section[id]{scroll-margin-top:105px}
   .project-alarin{background-position:center 38%}
   .project-park{background-position:center 46%}
 }
+
+
+/* ===== Projects editorial asymmetrical layout restore ===== */
+#projects .section-head{
+  margin-bottom:30px;
+}
+#projects .project-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.7fr) minmax(300px,1fr);
+  gap:22px;
+  align-items:end;
+}
+#projects .project-card{
+  width:100%;
+  margin:0;
+}
+#projects .project-alarin{
+  min-height:470px;
+  height:470px;
+  background-size:cover;
+  background-position:center 42%;
+}
+#projects .project-park{
+  min-height:390px;
+  height:390px;
+  background-size:cover;
+  background-position:center 48%;
+}
+#projects .project-card:before{
+  background:linear-gradient(
+    180deg,
+    rgba(4,21,38,.07) 0%,
+    rgba(4,21,38,.16) 36%,
+    rgba(4,21,38,.44) 68%,
+    rgba(4,21,38,.90) 100%
+  )!important;
+}
+#projects .project-overlay{
+  z-index:2;
+}
+#projects .project-meta-row{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:10px;
+}
+#projects .project-badge{
+  display:inline-flex;
+  align-items:center;
+  min-height:28px;
+  padding:6px 11px;
+  margin:0;
+  border-radius:999px;
+  background:#d8c4a3;
+  color:#0a2747;
+  font-size:10px;
+  font-weight:600;
+  line-height:1;
+  box-shadow:none;
+}
+#projects .project-status-badge{
+  display:inline-flex;
+  align-items:center;
+  min-height:28px;
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(10,39,71,.92);
+  color:#fff;
+  border:1px solid rgba(255,255,255,.18);
+  font-size:9px;
+  font-weight:600;
+  line-height:1;
+}
+@media(max-width:980px){
+  #projects .project-grid{
+    grid-template-columns:minmax(0,1.22fr) minmax(0,1fr);
+    gap:18px;
+  }
+  #projects .project-alarin{
+    min-height:430px;
+    height:430px;
+  }
+  #projects .project-park{
+    min-height:390px;
+    height:390px;
+  }
+}
+@media(max-width:760px){
+  #projects .section-head{
+    margin-bottom:22px;
+  }
+  #projects .project-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+    align-items:stretch;
+  }
+  #projects .project-alarin,
+  #projects .project-park{
+    width:100%;
+    min-height:360px;
+    height:360px;
+  }
+  #projects .project-alarin{background-position:center 38%}
+  #projects .project-park{background-position:center 46%}
+}
