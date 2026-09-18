@@ -1633,3 +1633,20 @@ section[id]{scroll-margin-top:105px}
     line-height:1.35;
   }
 }
+
+
+/* ===== Projects image-only polish ===== */
+.project-alarin{
+  background-position:center 42%;
+}
+.project-park{
+  background-position:center 48%;
+}
+.project-alarin:before,
+.project-park:before{
+  background:linear-gradient(180deg,rgba(4,21,38,.08) 0%,rgba(4,21,38,.34) 48%,rgba(4,21,38,.88) 100%)!important;
+}
+@media(max-width:760px){
+  .project-alarin{background-position:center 38%}
+  .project-park{background-position:center 46%}
+}
