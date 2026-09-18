@@ -295,3 +295,192 @@ footer{background:#f8f6f1}
   font-size:12px;
   line-height:1.8;
 }
+
+
+/* ===== Premium real-estate presentation pass ===== */
+.hero-trust{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:9px;
+  margin-top:30px;
+  max-width:500px;
+}
+.hero-trust span{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:#40546a;
+  font-size:13px;
+  font-weight:700;
+  padding:10px 0;
+  border-bottom:1px solid rgba(10,39,71,.09);
+}
+.hero-trust b{
+  display:grid;
+  place-items:center;
+  width:32px;height:32px;
+  border-radius:10px;
+  background:var(--navy);
+  color:#fff;
+  font-size:10px;
+  letter-spacing:.08em;
+  box-shadow:0 8px 18px rgba(10,39,71,.13);
+}
+
+.property-meta{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  margin-bottom:12px;
+}
+.property-meta span{
+  font-size:10px;
+  font-weight:800;
+  color:#667687;
+  background:#f5f7f8;
+  border:1px solid #e8ecef;
+  padding:6px 8px;
+  border-radius:999px;
+}
+.card-top{
+  align-items:flex-end;
+}
+.card-top strong{
+  font-size:21px;
+  line-height:1;
+}
+.card-top small{
+  color:#87919c;
+  font-size:10px;
+  font-weight:700;
+}
+.location-line{
+  display:flex;
+  align-items:center;
+  gap:5px;
+}
+.project-section-note{
+  text-align:left;
+  font-size:11px;
+  line-height:1.7;
+  color:#7b8490;
+  padding:10px 14px;
+  border-right:2px solid var(--sand);
+}
+.project-section-note b{color:var(--navy);font-size:12px}
+.project-grid{grid-template-columns:1.22fr .78fr}
+.project-card.project-featured{height:500px}
+.project-card:not(.project-featured){height:420px;align-self:end}
+.project-status{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:12px;
+}
+.project-status span,
+.project-status small{
+  display:inline-flex;
+  padding:6px 9px;
+  border-radius:999px;
+  font-size:10px;
+  font-weight:800;
+}
+.project-status span{background:rgba(255,255,255,.17)}
+.project-status small{background:rgba(199,163,107,.26);color:#f3dfbf}
+.project-overlay .btn b{font-size:18px;margin-right:6px}
+
+.project-hero{
+  min-height:610px;
+  background-position:center;
+}
+.project-hero-inner{
+  width:100%;
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:30px;
+}
+.project-hero-inner>div:first-child{max-width:700px}
+.project-hero-facts{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  min-width:460px;
+  background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.20);
+  backdrop-filter:blur(10px);
+  border-radius:18px;
+  overflow:hidden;
+}
+.project-hero-facts span{
+  display:grid;
+  gap:5px;
+  padding:18px;
+  border-left:1px solid rgba(255,255,255,.16);
+  font-size:11px;
+  color:rgba(255,255,255,.75);
+}
+.project-hero-facts span:last-child{border-left:0}
+.project-hero-facts b{font-size:15px;color:#fff}
+
+.unit-card{
+  grid-template-columns:1.05fr .95fr;
+  border-radius:22px;
+  min-height:330px;
+  box-shadow:0 14px 34px rgba(10,39,71,.06);
+}
+.unit-media{position:relative;min-height:100%}
+.unit-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.unit-media span{
+  position:absolute;
+  top:16px;right:16px;
+  z-index:2;
+  background:rgba(10,39,71,.88);
+  color:#fff;
+  padding:7px 10px;
+  border-radius:999px;
+  font-size:10px;
+  font-weight:800;
+}
+.unit-content{padding:26px!important}
+.unit-top{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  border-bottom:1px solid #edf0f2;
+  padding-bottom:12px;
+  margin-bottom:16px;
+}
+.unit-top span{font-size:20px!important}
+.unit-top small{font-size:10px;color:#89939e}
+.unit-card ul{
+  list-style:none;
+  padding:0;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px 12px;
+}
+.unit-card li{
+  background:#f6f7f8;
+  border:1px solid #edf0f2;
+  border-radius:9px;
+  padding:8px 9px;
+  font-size:11px;
+}
+
+@media(max-width:900px){
+  .project-grid{grid-template-columns:1fr}
+  .project-card.project-featured,.project-card:not(.project-featured){height:400px}
+  .project-hero-inner{display:grid}
+  .project-hero-facts{min-width:0;width:100%}
+}
+@media(max-width:760px){
+  .project-section-note{display:none}
+  .project-hero{min-height:520px}
+  .project-hero-facts{grid-template-columns:1fr 1fr 1fr}
+  .project-hero-facts span{padding:12px 9px}
+  .project-hero-facts b{font-size:12px}
+  .unit-card{grid-template-columns:1fr}
+  .unit-media{min-height:230px}
+  .unit-card ul{grid-template-columns:1fr}
+}
