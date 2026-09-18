@@ -1470,3 +1470,26 @@ section[id]{scroll-margin-top:105px}
     font-size:11px;
   }
 }
+
+
+/* ===== Guaranteed mobile admin public-site access ===== */
+.admin-public-link{display:flex}
+@media(max-width:760px){
+  .admin-public-link{
+    display:flex!important;
+    visibility:visible!important;
+    opacity:1!important;
+    position:sticky;
+    bottom:10px;
+    z-index:50;
+    width:100%!important;
+    min-height:44px;
+    justify-content:center;
+    align-items:center;
+    margin-top:8px!important;
+    background:#fff!important;
+    color:var(--navy)!important;
+    border:1px solid rgba(255,255,255,.7)!important;
+    box-shadow:0 10px 24px rgba(0,0,0,.16);
+  }
+}
