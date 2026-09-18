@@ -1269,3 +1269,17 @@ section[id]{scroll-margin-top:105px}
   .project-hero h1{font-size:32px}
   .detail-main-image img{height:285px;min-height:285px}
 }
+
+
+/* ===== Credibility & verified-data pass ===== */
+.reference-data{
+  background:#fff8ec!important;
+  border-color:#ead9b9!important;
+  color:#8a6939!important;
+}
+.unverified-docs span{
+  background:#faf8f4;
+  border-color:#e7dfd2;
+  color:#675d50;
+}
+.footer-grid p b{color:var(--navy)}
