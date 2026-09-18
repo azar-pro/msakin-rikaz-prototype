@@ -1240,7 +1240,13 @@ section[id]{scroll-margin-top:105px}
     padding:9px 11px;
     font-size:10px;
   }
-  .admin-side>.btn{display:none}
+  .admin-side>.btn{
+  display:flex;
+  width:100%;
+  justify-content:center;
+  margin-top:2px;
+  min-height:42px;
+}
   .admin-main{padding:16px 14px 34px}
   .admin-top{align-items:flex-start;gap:10px}
   .admin-top h1{font-size:24px}
@@ -1447,5 +1453,20 @@ section[id]{scroll-margin-top:105px}
   }
   .search-footer span{
     display:none;
+  }
+}
+
+
+/* ===== Mobile admin public-site button fix ===== */
+@media(max-width:760px){
+  .admin-side>.btn{
+    display:flex!important;
+    width:100%;
+    justify-content:center;
+    align-items:center;
+    min-height:42px;
+    margin-top:2px;
+    padding:10px 12px;
+    font-size:11px;
   }
 }
