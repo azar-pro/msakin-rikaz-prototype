@@ -108,8 +108,8 @@ function ProjectsSection({projects,go}){
             <em>The Park</em>
           </div>}
           <div className="project-overlay">
-            <div className="project-meta-row"><span className="project-badge">مشروع</span>{p.id==='P1'&&p.status&&<span className="project-status-badge">{p.status}</span>}</div>
-            <h3>{p.name}</h3>
+            {p.id!=='P2'&&<div className="project-meta-row"><span className="project-badge">مشروع</span>{p.id==='P1'&&p.status&&<span className="project-status-badge">{p.status}</span>}</div>}
+            {p.id!=='P2'&&<h3>{p.name}</h3>}
             <p>⌖ {p.location}</p>
             <button className="btn light project-cta" onClick={()=>go('project',p.id)}>استكشف المشروع <b aria-hidden="true">←</b></button>
           </div>
