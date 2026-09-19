@@ -34,7 +34,7 @@ function propertyPrice(p){ return p?.priceVerified===false||p?.price==null?'ال
 function hasRealWhatsApp(agent){return !!agent?.whatsapp && !/^96650000000\d$/.test(agent.whatsapp)}
 function waLink(agent,p){ if(!hasRealWhatsApp(agent)) return '#'; const text=`مرحبًا، أرغب في الاستفسار عن العقار رقم ${p.id} — ${p.type} — ${p.district}.`; return `https://wa.me/${agent.whatsapp}?text=${encodeURIComponent(text)}`; }
 
-function Logo({small=false}){return <div className={'brand '+(small?'brand-small':'')}><img src={A+'msakin-rikaz-logo.webp'} alt="مساكن ركاز"/><div><strong>مساكن ركاز للعقارات</strong><span>Msakin Rikaz Real Estate</span></div></div>}
+function Logo({small=false}){return <div className={'brand '+(small?'brand-small':'')}><img src={A+'msakin-rikaz-logo-original.jpg'} alt="مساكن ركاز"/><div><strong>مساكن ركاز للعقارات</strong><span>Msakin Rikaz Real Estate</span></div></div>}
 
 function Header({go}){
   const [open,setOpen]=useState(false);
