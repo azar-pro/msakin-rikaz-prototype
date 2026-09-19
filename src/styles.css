@@ -2291,3 +2291,134 @@ section[id]{scroll-margin-top:105px}
 @media(prefers-reduced-motion:reduce){
   #projects .project-park{transform:none!important}
 }
+
+
+/* ===== Desktop hero compact refinement ===== */
+@media(min-width:981px){
+  .hero{
+    min-height:620px;
+  }
+  .hero-content{
+    grid-template-columns:.92fr 1.08fr;
+    gap:48px;
+    padding:58px 0 62px;
+    align-items:center;
+  }
+  .hero-copy{
+    max-width:540px;
+  }
+  .hero-copy .eyebrow{
+    margin-bottom:8px;
+    padding:7px 11px;
+    font-size:10px;
+  }
+  .hero-copy h1{
+    font-size:clamp(40px,3.9vw,54px);
+    line-height:1.08;
+    margin:8px 0 14px;
+    max-width:10.5ch;
+  }
+  .hero-copy p{
+    font-size:16px;
+    line-height:1.8;
+    margin:0;
+  }
+  .hero-trust{
+    margin-top:22px;
+    gap:5px;
+  }
+  .hero-trust span{
+    padding:8px 0;
+    font-size:12px;
+  }
+  .hero-trust b{
+    width:29px;
+    height:29px;
+    border-radius:9px;
+    font-size:9px;
+  }
+
+  .search-panel{
+    padding:22px;
+    border-radius:24px;
+  }
+  .search-panel:before{
+    right:22px;
+    left:22px;
+  }
+  .search-head{
+    padding-bottom:12px;
+    margin-bottom:14px;
+  }
+  .search-head strong{
+    font-size:20px;
+  }
+  .search-head span{
+    font-size:10px;
+  }
+  .search-head>b{
+    padding:6px 9px;
+    font-size:10px;
+    min-width:86px;
+  }
+  .search-grid{
+    gap:10px 12px;
+  }
+  .search-grid label{
+    gap:5px;
+    font-size:10px;
+  }
+  .search-grid input,
+  .search-grid select{
+    min-height:42px;
+    padding:9px 11px;
+    border-radius:10px;
+    font-size:12px;
+  }
+  .search-actions{
+    gap:8px;
+    margin-top:14px;
+  }
+  .search-actions .btn{
+    min-height:44px;
+    padding:10px 12px;
+    font-size:11px;
+  }
+  .search-footer{
+    margin-top:10px;
+    gap:6px;
+  }
+  .search-footer button{
+    font-size:10px;
+  }
+  .search-footer span{
+    font-size:8px;
+    line-height:1.5;
+  }
+  .hero-bg{
+    opacity:.74;
+  }
+}
+
+@media(min-width:981px) and (max-height:780px){
+  .hero{
+    min-height:580px;
+  }
+  .hero-content{
+    padding:44px 0 48px;
+    gap:42px;
+  }
+  .hero-copy h1{
+    font-size:clamp(38px,3.65vw,50px);
+  }
+  .hero-trust{
+    margin-top:18px;
+  }
+  .search-panel{
+    padding:20px;
+  }
+  .search-grid input,
+  .search-grid select{
+    min-height:40px;
+  }
+}
