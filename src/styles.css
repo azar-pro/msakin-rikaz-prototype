@@ -3039,3 +3039,93 @@ footer{
     font-size:9px;
   }
 }
+
+
+/* ===== Brand lockup refinement — header + footer only ===== */
+.header .brand{
+  gap:10px;
+}
+.header .brand img{
+  width:50px;
+  height:50px;
+  border-radius:13px;
+  border:1px solid rgba(10,39,71,.055);
+  box-shadow:0 6px 16px rgba(10,39,71,.045);
+}
+.header .brand div{
+  gap:2px;
+}
+.header .brand strong{
+  font-size:14px;
+  line-height:1.25;
+  color:var(--navy);
+}
+.header .brand span{
+  font-size:9px;
+  line-height:1.3;
+  color:#6f7b88;
+  letter-spacing:.01em;
+}
+
+footer .brand{
+  gap:10px;
+}
+footer .brand img{
+  width:52px;
+  height:52px;
+  border-radius:13px;
+  border:1px solid rgba(10,39,71,.055);
+  box-shadow:0 6px 16px rgba(10,39,71,.035);
+}
+footer .brand div{
+  gap:2px;
+}
+footer .brand strong{
+  font-size:15px;
+  line-height:1.25;
+  color:var(--navy);
+}
+footer .brand span{
+  font-size:9px;
+  line-height:1.3;
+  color:#687684;
+}
+
+@media(max-width:980px){
+  .header .brand img{
+    width:46px;
+    height:46px;
+  }
+  .header .brand strong{
+    font-size:13px;
+  }
+  .header .brand span{
+    font-size:8.5px;
+  }
+}
+@media(max-width:760px){
+  .header .brand{
+    gap:8px;
+  }
+  .header .brand img{
+    width:42px;
+    height:42px;
+    border-radius:11px;
+  }
+  .header .brand strong{
+    font-size:12px;
+  }
+  .header .brand span{
+    display:none;
+  }
+  footer .brand img{
+    width:48px;
+    height:48px;
+  }
+  footer .brand strong{
+    font-size:14px;
+  }
+  footer .brand span{
+    font-size:8.5px;
+  }
+}
