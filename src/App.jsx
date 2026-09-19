@@ -19,7 +19,7 @@ const seedAgents = [
 ];
 
 const seedProjects = [
-  {id:'P1',name:'مشروع وحدات الأرين F',location:'حي الروابي — الرياض',status:'متاح',image:A+'alareen-project.jpg',description:'مشروع سكني يركز على الخصوصية والتصميم العصري، وقريب من مخرج 14 وجامع القدس.',agentId:'A3'},
+  {id:'P1',name:'مشروع وحدات الأرين F',location:'حي الروابي — الرياض',status:'متاح',image:A+'building-a.jpg',description:'مشروع سكني يركز على الخصوصية والتصميم العصري، وقريب من مخرج 14 وجامع القدس.',agentId:'A3'},
   {id:'P2',name:'The Park — الربوة بارك',location:'الرياض',status:'',image:A+'interior-d.jpg',description:'اسم مشروع مدعوم بالمواد البصرية المرسلة. تفاصيل الوحدات تُستكمل عند إدخال البيانات المعتمدة.',agentId:'A3'}
 ];
 
