@@ -6,7 +6,7 @@ const seedProperties = [
   {id:'DEMO-101',title:'فيلا عائلية في شرق الرياض',transaction:'بيع',type:'فيلا',city:'الرياض',district:'الريان',price:null,area:675,beds:5,baths:5,status:'متاح',featured:true,priceVerified:false,agentId:'A1',image:A+'building-b.jpg',age:'غير محدد',furnishing:'غير مفروش',description:'بيانات عرض مخصصة لتوضيح تجربة التصفح والبحث داخل المنصة.',features:['موقف خاص','مدخل مستقل','مساحات واسعة']},
   {id:'DEMO-102',title:'شقة حديثة في حي الروابي',transaction:'بيع',type:'شقة',city:'الرياض',district:'الروابي',price:null,area:130,beds:3,baths:3,status:'متاح',featured:true,priceVerified:false,agentId:'A1',image:A+'building-a.jpg',age:'غير محدد',furnishing:'غير مفروش',description:'بيانات عرض توضيحية، وتُستكمل بيانات العقار عند الاعتماد.',features:['مصعد','موقف','دخول ذكي']},
   {id:'DEMO-103',title:'شقة سكنية للإيجار',transaction:'إيجار',type:'شقة',city:'الرياض',district:'السعادة',price:null,area:140,beds:3,baths:2,status:'متاح',featured:true,priceVerified:false,agentId:'A1',image:A+'interior-a.jpg',age:'غير محدد',furnishing:'غير محدد',description:'بيانات عرض توضيحية لهذه الوحدة.',features:['مصعد']},
-  {id:'DEMO-104',title:'وحدة ضمن مشروع الأرين F',transaction:'بيع',type:'دور',city:'الرياض',district:'الروابي',price:null,area:165,beds:3,baths:4,status:'متاح',featured:true,priceVerified:false,agentId:'A3',project:'P1',image:A+'alareen-project.jpg',age:'جديد',furnishing:'غير محدد',description:'وحدة عرض مرتبطة بصفحة مشروع الأرين F.',features:['دخول ذكي','مصعد','عدادات مستقلة','عزل حراري ومائي']},
+  {id:'DEMO-104',title:'وحدة ضمن مشروع الأرين F',transaction:'بيع',type:'دور',city:'الرياض',district:'الروابي',price:null,area:165,beds:3,baths:4,status:'متاح',featured:true,priceVerified:false,agentId:'A3',project:'P1',image:A+'building-a.jpg',age:'جديد',furnishing:'غير محدد',description:'وحدة عرض مرتبطة بصفحة مشروع الأرين F.',features:['دخول ذكي','مصعد','عدادات مستقلة','عزل حراري ومائي']},
   {id:'DEMO-105',title:'أرض سكنية',transaction:'بيع',type:'أرض',city:'الرياض',district:'البرية',price:null,area:630,beds:null,baths:null,status:'متاح',featured:false,priceVerified:false,agentId:'A2',image:A+'building-c.jpg',age:'—',furnishing:'—',description:'بيانات عرض توضيحية.',features:[]},
   {id:'DEMO-106',title:'تاون هاوس للإيجار',transaction:'إيجار',type:'تاون هاوس',city:'الرياض',district:'الملقا',price:null,area:300,beds:4,baths:4,status:'متاح',featured:true,priceVerified:false,agentId:'A3',image:A+'interior-b.jpg',age:'غير محدد',furnishing:'غير محدد',description:'بيانات عرض توضيحية.',features:['كراج','مدخل مستقل']}
 ];
@@ -155,6 +155,13 @@ function App(){
   const [properties,setProperties]=useLocalState('rikaz-properties-v3',seedProperties);
   const [agents,setAgents]=useLocalState('rikaz-agents-v3',seedAgents);
   const [projects,setProjects]=useLocalState('rikaz-projects-v3',seedProjects);
+  useEffect(()=>{
+    setProjects(current=>current.map(p=>
+      p.id==='P1' && p.image!==A+'building-a.jpg'
+        ? {...p,image:A+'building-a.jpg'}
+        : p
+    ));
+  },[]);
   const [route,setRoute]=useState(()=>{const h=location.hash.slice(1).split('/');return {view:h[0]||'home',id:h[1]}});
   useEffect(()=>{const on=()=>{const h=location.hash.slice(1).split('/');setRoute({view:h[0]||'home',id:h[1]});scrollTo(0,0)};addEventListener('hashchange',on);return()=>removeEventListener('hashchange',on)},[]);
   const go=(view,id)=>{location.hash=id?`${view}/${id}`:view;};
